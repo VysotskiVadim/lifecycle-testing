@@ -14,9 +14,9 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
     FragmentPagerAdapter(fm) {
 
     private val tabs = listOf(
-        Tab(R.string.tab_text_1) { NotSavedState() },
-        Tab(R.string.tab_text_2) { DialogExample() },
-        Tab(R.string.tab_text_2) { FormFragment() }
+        Tab(R.string.tab_state_loss) { NotSavedState() },
+        Tab(R.string.tab_dialog_loss) { DialogExample() },
+        Tab(R.string.tab_input_loss) { FormFragment() }
     )
 
     override fun getItem(position: Int): Fragment {
