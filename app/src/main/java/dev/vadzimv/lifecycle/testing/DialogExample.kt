@@ -13,6 +13,7 @@ private const val USER_CHOICE_KEY = "user-choice"
 class DialogExample : Fragment(R.layout.text_and_button) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        button.text = "Choose a pill"
         val text = text
         if (savedInstanceState != null) {
             text.text = savedInstanceState.getString(USER_CHOICE_KEY)

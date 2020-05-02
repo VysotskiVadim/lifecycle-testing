@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import dev.vadzimv.lifecycle.testing.DialogExample
+import dev.vadzimv.lifecycle.testing.FormFragment
 import dev.vadzimv.lifecycle.testing.NotSavedState
 import dev.vadzimv.lifecycle.testing.R
 
@@ -14,7 +15,8 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager) :
 
     private val tabs = listOf(
         Tab(R.string.tab_text_1) { NotSavedState() },
-        Tab(R.string.tab_text_2) { DialogExample() }
+        Tab(R.string.tab_text_2) { DialogExample() },
+        Tab(R.string.tab_text_2) { FormFragment() }
     )
 
     override fun getItem(position: Int): Fragment {
