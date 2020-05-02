@@ -12,6 +12,7 @@ class NotSavedState : Fragment(R.layout.text_and_button) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         button.text = "+1"
+        text.text = counter.toString()
         button.setOnClickListener {
             counter++
             text.text = counter.toString()
