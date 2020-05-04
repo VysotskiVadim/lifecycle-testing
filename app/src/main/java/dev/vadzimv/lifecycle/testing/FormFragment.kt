@@ -19,15 +19,17 @@ class FormFragment : Fragment(R.layout.fragment_form) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         name.bindLiveData(viewModel.name, viewLifecycleOwner)
         ageConfirmation.bindLiveData(viewModel.ageConfirmed, viewLifecycleOwner)
-        viewModel.progressVisible.observe(viewLifecycleOwner) {
-            if (it) {
+        viewModel.progressVisible.observe(viewLifecycleOwner) { progressVisible ->
+            if (progressVisible) {
                 progressBar.visibility = View.VISIBLE
                 nameLayout.visibility = View.GONE
                 ageConfirmation.visibility = View.GONE
+                submitButton.visibility = View.GONE
             } else {
                 progressBar.visibility = View.GONE
                 nameLayout.visibility = View.VISIBLE
                 ageConfirmation.visibility = View.VISIBLE
+                submitButton.visibility = View.VISIBLE
             }
         }
     }
